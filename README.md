@@ -57,29 +57,46 @@ hsmw-tutor/
 
 ## 🚀 Getting Started
 
-### Prerequisites
-
-- [uv](https://github.com/astral-sh/uv) — fast Python package manager
-- Access to the HSMW Ollama server (credentials required)
-
-### Installation
+### 1. Clone the repository
 
 ```bash
-# Clone the repo
-git clone <your-repo-url>
+git clone https://github.com/yourusername/hsmw-tutor.git
 cd hsmw-tutor
+```
 
-# Install dependencies
+### 2. Install uv
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+### 3. Install dependencies
+
+```bash
 uv sync
 ```
 
-### Run
+### 4. Add your credentials
+
+```bash
+mkdir -p sicim
+```
+
+Create `sicim/config.gin` and add:
+
+```
+create_client.host = "https://<your-ollama-host>/ollama/"
+create_client.api_key = "<your-api-key>"
+```
+
+### 5. Run
 
 ```bash
 uv run streamlit run app.py
 ```
 
-Then open [http://localhost:8501](http://localhost:8501) in your browser.
+Open [http://localhost:8501](http://localhost:8501) in your browser.
+
 
 ---
 
