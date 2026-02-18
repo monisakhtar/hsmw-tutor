@@ -76,20 +76,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 uv sync
 ```
 
-### 4. Add your credentials
-
-```bash
-mkdir -p sicim
-```
-
-Create `sicim/config.gin` and add:
-
-```
-create_client.host = "https://<your-ollama-host>/ollama/"
-create_client.api_key = "<your-api-key>"
-```
-
-### 5. Run
+### 4. Run
 
 ```bash
 uv run streamlit run app.py
